@@ -9,6 +9,9 @@
 # testing
 /coverage
 
+# trunk
+.trunk
+
 # next.js
 /.next/
 /out/
