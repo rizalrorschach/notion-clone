@@ -1,13 +1,15 @@
 "use client";
 
-import { api } from "@/convex/_generated/api";
-import { Doc, Id } from "@/convex/_generated/dataModel";
-import { useQuery } from "convex/react";
 import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
-import { Item } from "./item";
-import { cn } from "@/lib/utils";
+import { useQuery } from "convex/react";
 import { FileIcon } from "lucide-react";
+
+import { Doc, Id } from "@/convex/_generated/dataModel";
+import { api } from "@/convex/_generated/api";
+import { cn } from "@/lib/utils";
+
+import { Item } from "./item";
 
 interface DocumentListProps {
   parentDocumentId?: Id<"documents">;
@@ -48,6 +50,7 @@ export const DocumentList = ({ parentDocumentId, level = 0 }: DocumentListProps)
       </>
     );
   }
+
   return (
     <>
       <p
